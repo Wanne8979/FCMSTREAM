@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1. FC Magdeburg Livestream</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #002b7f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #002b7f;
+    }
+
+    .container {
+      border: 3px solid #007fff;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0, 43, 127, 0.2);
+    }
+
+    .link-box {
+      background-color: #f0f8ff;
+      padding: 10px;
+      border: 2px dashed #007fff;
+      border-radius: 10px;
+      margin: 20px 0;
+      word-wrap: break-word;
+      font-size: 1.1em;
+      user-select: all;
+    }
+
+    button {
+      background-color: #007fff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #005bbb;
+    }
+
+    .hinweis {
+      font-size: 1em;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/de/thumb/5/5e/1._FC_Magdeburg_Logo.svg/640px-1._FC_Magdeburg_Logo.svg.png" alt="1. FC Magdeburg Logo">
+    </div>
+
+    <h1>🔵⚪ 1. FC Magdeburg Livestream</h1>
+
+    <p>Für beste Qualität öffne den Stream im <strong>externen Browser</strong> (z. B. Chrome, Safari, Firefox).</p>
+
+    <div class="link-box" id="streamLink">
+      https://live.fc2.com/72949659/
+    </div>
+
+    <button onclick="copyLink()">🔗 Link kopieren</button>
+
+    <p class="hinweis">
+      📱 Facebook öffnet Links in einem internen Browser – dort ist die Qualität schlechter.<br><br>
+      👉 <strong>Bitte Link kopieren und in deinem Browser einfügen</strong> für ein besseres Erlebnis!
+    </p>
+  </div>
+
+  <script>
+    function copyLink() {
+      const link = document.getElementById("streamLink").textContent.trim();
+      navigator.clipboard.writeText(link).then(() => {
+        alert("✅ Link wurde kopiert! Jetzt im Browser einfügen für beste Qualität.");
+      });
+    }
+  </script>
+
+</body>
+</html>
